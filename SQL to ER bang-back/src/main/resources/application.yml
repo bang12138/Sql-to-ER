@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: sql-to-er-bang
+
+server:
+  port: 8080
+
+# 日志级别
+logging:
+  level:
+    com.bang.sqltoerbangback: debug
+    root: info
+
+# Knife4j API 文档配置
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+  api-docs:
+    path: /v3/api-docs
+
+knife4j:
+  enable: true
+  setting:
+    language: zh_cn
+
+# 解析限制
+app:
+  parse:
+    max-sql-length: 102400

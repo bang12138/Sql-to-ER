@@ -1,0 +1,35 @@
+# ============================================
+# 生产环境配置 (spring.profiles.active=prod)
+# 启动命令: java -jar app.jar -Dspring.profiles.active=prod
+# ============================================
+
+server:
+  port: 8080
+  shutdown: graceful                          # 优雅停机
+
+spring:
+  lifecycle:
+    timeout-per-shutdown-phase: 30s          # 优雅停机超时
+
+# ---------- 关闭 Knife4j/Swagger（生产不暴露）----------
+knife4j:
+  enable: false
+
+springdoc:
+  api-docs:
+    enabled: false
+  swagger-ui:
+    enabled: false
+
+# ---------- 日志 ----------
+logging:
+  level:
+    root: INFO
+    com.bang.sqltoerbangback: INFO
+  file:
+    path: /var/log/sqlerbang                 # 日志文件路径
+
+# ---------- 解析限制（与默认一致）----------
+app:
+  parse:
+    max-sql-length: 102400                   # 最大 100KB

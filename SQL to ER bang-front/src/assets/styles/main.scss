@@ -1,0 +1,190 @@
+// ========== CSS 变量 ==========
+:root {
+  --header-height: 48px;
+  --border-color: #e4e7ed;
+  --bg-canvas: #f5f7fa;
+  --text-primary: #303133;
+  --text-secondary: #909399;
+  --text-muted: #c0c4cc;
+}
+
+// ========== 全局重置 ==========
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB',
+    'Microsoft YaHei', Arial, sans-serif;
+  font-size: 14px;
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+}
+
+// ========== 滚动条样式 ==========
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c0c4cc;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+// ========== 通用工具类 ==========
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// ========== 物理 ER 节点全局样式（X6 动态渲染） ==========
+.er-node {
+  background: #fff;
+  border-radius: 8px;
+  border: 2px solid #dcdfe6;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  cursor: move;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .node-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 13px;
+    min-height: 36px;
+    flex-shrink: 0;
+
+    .pk-header-icon {
+      font-size: 13px;
+    }
+
+    .table-name {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      flex-shrink: 1;
+    }
+
+    .table-comment {
+      font-size: 11px;
+      font-weight: 400;
+      opacity: 0.85;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      flex-shrink: 2;
+    }
+  }
+
+  .node-body {
+    flex: 1;
+    overflow-y: auto;
+
+    .column-row {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 3px 12px;
+      font-size: 12px;
+      border-bottom: 1px solid #f2f3f5;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &.pk-row {
+        background: #fef0f0;
+      }
+
+      &.fk-row {
+        background: #f0f9eb;
+      }
+
+      .col-icon {
+        width: 18px;
+        flex-shrink: 0;
+        text-align: center;
+        font-size: 10px;
+
+        .pk-badge,
+        .fk-badge {
+          font-size: 10px;
+        }
+      }
+
+      .col-name {
+        font-weight: 500;
+        color: #303133;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        min-width: 60px;
+        flex-shrink: 1;
+      }
+
+      .col-type {
+        color: #909399;
+        font-size: 11px;
+        font-family: 'Cascadia Code', 'Fira Code', 'Consolas', monospace;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        flex-shrink: 2;
+      }
+
+      .col-comment-icon {
+        font-size: 10px;
+        flex-shrink: 0;
+      }
+    }
+
+    .empty-hint {
+      padding: 12px;
+      text-align: center;
+      color: #c0c4cc;
+      font-size: 12px;
+    }
+  }
+}
+
+.er-node-error {
+  padding: 20px;
+  text-align: center;
+  color: #f56c6c;
+  font-size: 13px;
+}
+
+.x6-graph-container {
+  width: 100%;
+  height: 100%;
+}
