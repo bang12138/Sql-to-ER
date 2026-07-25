@@ -9,6 +9,12 @@
   <img src="https://img.shields.io/badge/Spring%20Boot-4.1-green" alt="Spring Boot">
 </p>
 
+<p align="center">
+  <a href="http://20.205.45.177/" target="_blank">
+    <img src="https://img.shields.io/badge/🚀_在线体验-20.205.45.177-blue?style=for-the-badge" alt="在线体验">
+  </a>
+</p>
+
 ---
 
 ## ✨ 功能特性
