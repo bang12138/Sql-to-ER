@@ -6,7 +6,7 @@
     </div>
     <div class="header-right">
       <a
-        href="https://github.com"
+        href="https://github.com/bang12138/Sql-to-ER"
         target="_blank"
         rel="noopener noreferrer"
         class="github-link"
