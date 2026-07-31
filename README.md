@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="http://20.205.45.177/" target="_blank">
+  <a href="http://sqltoer.bang12138.online/" target="_blank">
     <img src="https://img.shields.io/badge/🚀-在线体验-blue?style=for-the-badge" alt="在线体验">
   </a>
 </p>
